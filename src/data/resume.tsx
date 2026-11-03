@@ -173,7 +173,7 @@ const imageIcon = (src: string) =>
         },
       ],
       image: "",
-      video: "/PhantomCutVideo/PhantomCutDemo.mp4",
+      video: "/PhantomCutVideo/PhantomCutShort.mp4",
     },
     {
       title: "TermShield",
