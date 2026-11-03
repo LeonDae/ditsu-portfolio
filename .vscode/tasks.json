@@ -1,0 +1,101 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "repair-resume-encoding",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p='D:\\SELF-DITSU\\portfolio\\src\\data\\resume.tsx'; $b=[System.IO.File]::ReadAllBytes($p); $utf8=New-Object System.Text.UTF8Encoding($false,$false); $s=$utf8.GetString($b); $s=$s.Replace([char]0xFFFD,\"'\").Replace([char]0x92,\"'\"); [System.IO.File]::WriteAllText($p,$s,(New-Object System.Text.UTF8Encoding($false)))"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "repair-resume-encoding-2",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=\"D:\\SELF-DITSU\\portfolio\\src\\data\\resume.tsx\"; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $s=$s.Replace([char]0xFFFD,[char]0x27).Replace([char]0x92,[char]0x27); [System.IO.File]::WriteAllText($p,$s,(New-Object System.Text.UTF8Encoding($false))"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "repair-resume-encoding-3",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=\"D:\\SELF-DITSU\\portfolio\\src\\data\\resume.tsx\"; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $s=$s.Replace([char]0xFFFD,[char]0x27).Replace([char]0x92,[char]0x27); Set-Content -LiteralPath $p -Value $s -Encoding utf8"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "repair-resume-encoding-4",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=.srcdata\resume.tsx; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $s=$s.Replace([char]0xFFFD,[char]0x27).Replace([char]0x92,[char]0x27); Set-Content -LiteralPath $p -Value $s -Encoding utf8"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "repair-resume-encoding-5",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=./src/data/resume.tsx; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $s=$s.Replace([char]0xFFFD,[char]0x27).Replace([char]0x92,[char]0x27); Set-Content -LiteralPath $p -Value $s -Encoding utf8"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "repair-resume-encoding-6",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=Join-Path $PWD.Path src/data/resume.tsx; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $s=$s.Replace([char]0xFFFD,[char]0x27).Replace([char]0x92,[char]0x27); Set-Content -LiteralPath $p -Value $s -Encoding utf8"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "normalize-resume-encoding",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=Join-Path $PWD.Path src/data/resume.tsx; $b=[System.IO.File]::ReadAllBytes($p); $u=New-Object System.Text.UTF8Encoding($false,$false); $s=$u.GetString($b); $a=[System.Text.Encoding]::ASCII.GetBytes($s); [System.IO.File]::WriteAllBytes($p,$a)"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "remove-resume-leading-marker",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-Command",
+				"$p=Join-Path $PWD.Path src/data/resume.tsx; $b=[System.IO.File]::ReadAllBytes($p); if($b.Length -gt 0 -and $b[0] -eq 63){[System.IO.File]::WriteAllBytes($p,$b[1..($b.Length-1)])}"
+			],
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
