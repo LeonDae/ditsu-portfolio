@@ -1,47 +1,196 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Ditsu Kundu — Developer Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+\<p align="center">
+&#x20; \<strong>Software Engineer | AI & Full-Stack Developer | Electronics & Communication Engineering\</strong>
+\</p>
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+\<p align="center">
+&#x20; A personal portfolio showcasing my engineering journey, projects, technical experience, hackathon achievements, and experiments at the intersection of AI and software development.
+\</p>
 
-# Features
+\<p align="center">
+&#x20; \<a href="ditsukundu08@gmail.com">Email\</a> •
+&#x20; \<a href="https://github.com/LeonDae/ditsu-portfolio.git">GitHub\</a> •
+&#x20; \<a href="https://www.linkedin.com/in/ditsukundu/">LinkedIn\</a>
+\</p>
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+---
 
-# Getting Started Locally
+## About
 
-1. Clone this repository to your local machine:
+I'm Ditsu Kundu, a final-year Electronics & Communication Engineering undergraduate at the Institute of Engineering & Management, Kolkata, graduating in 2027.
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+I enjoy building practical software systems, exploring AI-powered applications, and solving engineering problems through code.
 
-2. Move to the cloned directory
+My interests include:
 
-   ```bash
-   cd portfolio
-   ```
+- Artificial Intelligence and Large Language Models
+- Full-Stack Application Development
+- Retrieval-Augmented Generation (RAG)
+- Data Structures and Algorithms
+- Software Engineering and System Design
+- Intelligent IoT and Embedded Systems
 
-3. Install dependencies:
+This portfolio brings together my technical work, professional experience, achievements, and ongoing learning journey.
 
-   ```bash
-   pnpm install
-   ```
+## Selected Projects
 
-4. Start the local Server:
+### 1. AI-Powered SQL Query Generator
 
-   ```bash
-   pnpm dev
-   ```
+An AI-integrated application that converts natural language instructions into executable SQL queries.
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
+**Highlights**
 
-# License
+- Dual-model pipeline using Qwen2.5 and Gemini.
+- Feedback-driven SQL query regeneration.
+- Downloadable query results.
+- Designed to support multiple departments and concurrent users.
 
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+**Technologies:** Python, FastAPI, Qwen2.5, Gemini, SQL.
+
+### 2. WattWatch — Phantom Cut Intelligent Energy Auditor
+
+An intelligent energy monitoring solution developed during a sustainability-focused hackathon.
+
+**Highlights**
+
+- Real-time electrical device monitoring.
+- YOLOv8-based detection of 10+ devices.
+- ESP32-powered monitoring and automated power-wastage alerts.
+- Hackathon-winning project.
+
+**Technologies:** Python, YOLOv8, ESP32, Computer Vision, IoT.
+
+**Repository:** [WattWatch on GitHub](https://github.com/LeonDae/WattWatch_PhantomCut)
+
+### 3. TermShield — AI Contract Risk Analyzer
+
+An AI-powered contract analysis platform designed to help Indian freelancers understand potential risks before signing agreements.
+
+**Highlights**
+
+- Identifies potentially risky contractual clauses.
+- Generates contract summaries and suggested replies.
+- Uses Retrieval-Augmented Generation (RAG).
+- Embeddings and vector search ground analysis in reference contract templates.
+
+**Technologies:** AI/LLMs, RAG, Embeddings, Vector Search, Full-Stack Development.
+
+---
+
+## Experience
+
+**Generative AI Intern**
+IEM UEM Generative AI Centre of Excellence
+September 2025 – June 2026
+
+Worked on an AI-powered SQL Query Generator using Qwen2.5 and Gemini, implementing feedback-driven query regeneration.
+
+**VLSI Trainee**
+Jadavpur University
+May 2025 – July 2025
+
+- Simulated 15+ digital VLSI circuits using Xilinx Vivado.
+- Verified designs using testbenches.
+- Programmed an Artix-7 FPGA using Verilog.
+
+## Technical Skills
+
+| Category  | Technologies                                        |
+| --------- | --------------------------------------------------- |
+| Languages | Java, Python, SQL                                   |
+| Core CS   | DSA, OOP, Operating Systems, DBMS                   |
+| AI & ML   | LangChain, RAG, Prompt Engineering, LLM Integration |
+| Backend   | FastAPI                                             |
+| Cloud     | AWS S3                                              |
+| Tools     | Git, GitHub, Xilinx Vivado                          |
+
+## Achievements
+
+- **Winner — Frost Hacks Season 2:** Hackathon evaluated by TCS.
+- **Event Organizer — Diversion 2K26:** MLH hackathon; supported technical operations and engagement for 100+ teams and 300+ participants.
+- **Mentor — HackNex Season 2:** MLH hackathon; mentored 110+ teams and 400+ participants.
+- **Runner-up — ISMAW Sustainability Hackathon.**
+
+## Certifications
+
+- IBM — AI Agents using RAG and LangChain.
+- ServiceNow — Certified System Administrator (CSA).
+- IBM — Search Engine Optimization (In Progress).
+
+## Education
+
+**B.Tech — Electronics & Communication Engineering**
+Institute of Engineering & Management, Salt Lake / University of Engineering & Management, Kolkata.
+
+Expected Graduation: May 2027
+GPA: 8.62/10 (up to 5th semester).
+
+## Tech Stack Behind This Portfolio
+
+This website is built using modern frontend technologies with a focus on performance, responsiveness, accessibility, and maintainability.
+
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **UI:** React
+- **Styling:** Tailwind CSS
+- **Animations:** Motion
+- **Icons:** Lucide React
+- **Theming:** next-themes
+- **Deployment:** Vercel
+
+## Run Locally
+
+To explore or run this project on your local machine:
+
+**1. Clone the repository**
+
+```bash
+git clone <YOUR_REPOSITORY_URL>
+```
+
+**2. Navigate to the project**
+
+```bash
+cd ditsupportfolio
+```
+
+**3. Install dependencies**
+
+```bash
+pnpm install
+```
+
+**4. Start the development server**
+
+```bash
+pnpm dev
+```
+
+**5. Open in your browser**
+
+```text
+http://localhost:3000
+```
+
+**6. Create a production build**
+
+```bash
+pnpm build
+```
+
+## License & Acknowledgements
+
+The original template is licensed under the MIT License. See the repository's `LICENSE` file for applicable terms.
+
+The portfolio's customization, personal content, and project presentation reflect my own engineering journey.
+
+---
+
+\<p align="center">
+&#x20; Designed and developed by \<strong>Ditsu Kundu\</strong>
+\</p>
+
+\<p align="center">
+&#x20; \<i>Building, learning, experimenting, and shipping.\</i>
+\</p>
