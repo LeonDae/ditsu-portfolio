@@ -1,18 +1,13 @@
-# Ditsu Kundu — Developer Portfolio
+# Ditsu Kundu
 
-\<p align="center">
-&#x20; \<strong>Software Engineer | AI & Full-Stack Developer | Electronics & Communication Engineering\</strong>
-\</p>
+### Software Engineer | AI & Full-Stack Developer | ECE
 
-\<p align="center">
-&#x20; A personal portfolio showcasing my engineering journey, projects, technical experience, hackathon achievements, and experiments at the intersection of AI and software development.
-\</p>
+Building intelligent applications, exploring emerging technologies,
+and developing practical software systems.
 
-\<p align="center">
-&#x20; \<a href="ditsukundu08@gmail.com">Email\</a> •
-&#x20; \<a href="https://github.com/LeonDae/ditsu-portfolio.git">GitHub\</a> •
-&#x20; \<a href="https://www.linkedin.com/in/ditsukundu/">LinkedIn\</a>
-\</p>
+[Email](mailto:ditsukundu08@gmail.com) ·
+[GitHub](https://github.com/LeonDae) ·
+[LinkedIn](https://www.linkedin.com/in/ditsukundu/)
 
 ---
 
@@ -187,10 +182,8 @@ The portfolio's customization, personal content, and project presentation reflec
 
 ---
 
-\<p align="center">
-&#x20; Designed and developed by \<strong>Ditsu Kundu\</strong>
-\</p>
+---
 
-\<p align="center">
-&#x20; \<i>Building, learning, experimenting, and shipping.\</i>
-\</p>
+**Designed and developed by Ditsu Kundu**
+
+*Building, learning, experimenting, and shipping.*
