@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import { getSiteUrl } from "@/lib/site-url";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -21,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(DATA.url || "http://localhost:3000"),
+  metadataBase: getSiteUrl(DATA.url),
   title: {
     default: DATA.name,
     template: `%s | ${DATA.name}`,
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${DATA.name}`,
     description: DATA.description,
-    url: DATA.url,
+    url: getSiteUrl(DATA.url).toString(),
     siteName: `${DATA.name}`,
     locale: "en_US",
     type: "website",

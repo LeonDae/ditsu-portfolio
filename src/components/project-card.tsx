@@ -31,9 +31,14 @@ interface Props {
   description: string;
   dates: string;
   tags: readonly string[];
-  link?: string;
   image?: string;
   video?: string;
+  primaryIcon?: React.ReactNode;
+  secondaryAction?: {
+    href: string;
+    icon: React.ReactNode;
+    label: string;
+  };
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -48,9 +53,10 @@ export function ProjectCard({
   description,
   dates,
   tags,
-  link,
   image,
   video,
+  primaryIcon,
+  secondaryAction,
   links,
   className,
 }: Props) {
@@ -88,12 +94,13 @@ export function ProjectCard({
             {links.map((link, idx) => (
               <Link
                 href={link.href}
-                key={idx}
+              key={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Badge
+                  key={`badge-${link.href}`}
                   className="flex items-center gap-1.5 text-xs bg-black text-white hover:bg-black/90"
                   variant="default"
                 >
@@ -111,15 +118,28 @@ export function ProjectCard({
             <h3 className="font-semibold">{title}</h3>
             <time className="text-xs text-muted-foreground">{dates}</time>
           </div>
-          <Link
-            href={href || "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-            aria-label={`Open ${title}`}
-          >
-            <ArrowUpRight className="h-4 w-4" aria-hidden />
-          </Link>
+          <div className="flex items-center gap-2">
+            <Link
+              href={href || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex size-8 shrink-0 items-center justify-center text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+              aria-label={`Open ${title}`}
+            >
+              {primaryIcon ?? <ArrowUpRight className="h-4 w-4" aria-hidden />}
+            </Link>
+            {secondaryAction && (
+              <Link
+                href={secondaryAction.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex size-8 shrink-0 items-center justify-center text-muted-foreground hover:text-foreground transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
+                aria-label={secondaryAction.label}
+              >
+                {secondaryAction.icon}
+              </Link>
+            )}
+          </div>
         </div>
         <div className="text-xs flex-1 prose max-w-full text-pretty font-sans leading-relaxed text-muted-foreground dark:prose-invert">
           <Markdown>{description}</Markdown>

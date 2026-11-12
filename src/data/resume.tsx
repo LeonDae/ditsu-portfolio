@@ -1,9 +1,10 @@
 import { Icons } from "@/components/icons";
+import Image from "next/image";
 import { HomeIcon, NotebookIcon } from "lucide-react";
 
 const imageIcon = (src: string) =>
   function ImageIcon({ className }: { className?: string }) {
-    return <img src={src} alt="" aria-hidden="true" className={className} />;
+    return <Image src={src} alt="" aria-hidden="true" width={24} height={24} className={className} />;
   };
 
  export const DATA = {
@@ -16,7 +17,7 @@ const imageIcon = (src: string) =>
     "Final-year Electronics and Communication Engineering undergraduate interested in full-stack development, AI-integrated systems, and problem solving.",
   summary:
     "I am an Electronics and Communication Engineering undergraduate at IEM/UEM, building full-stack and AI-integrated systems. I enjoy applying data structures, algorithms, and object-oriented design to practical projects.",
-  avatarUrl: "/dp.jpg",
+  avatarUrl: "/cinematicDP.png",
   skills: [
     { category: "Frontend", skills: [{ name: "HTML", icon: "/html.png" }, { name: "CSS", icon: "/css.jpg" }, { name: "JavaScript", icon: "/Javascript.png" }, { name: "TypeScript", icon: "/typescript.png" }, { name: "React", icon: "/react.png" }, { name: "Next.js", icon: "/nextjs.png" }] },
     { category: "Backend", skills: [{ name: "Node.js", icon: "/nodejs.png" }, { name: "PostgreSQL", icon: "/postgre.png" }, { name: "REST APIs", icon: "/rest api.png" }] },
@@ -28,8 +29,6 @@ const imageIcon = (src: string) =>
     { href: "/", icon: HomeIcon, label: "Home" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
     social: {
       GitHub: {
         name: "GitHub",
@@ -66,7 +65,7 @@ const imageIcon = (src: string) =>
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:ditsukundu08@gmail.com",
         icon: Icons.email,
 
         navbar: false,
@@ -141,9 +140,14 @@ const imageIcon = (src: string) =>
   projects: [
     {
       title: "Queryra - AI-Powered Data Querying Platform",
-      href: "https://github.com/LeonDae/Queryra.git",
+      href: "https://queryra-production.up.railway.app/",
       dates: "Academic project",
-      active: true,
+      primaryIcon: <Image src="/icons/samsung-internet.png" alt="" aria-hidden="true" width={24} height={24} className="size-6 shrink-0 object-contain" />,
+      secondaryAction: {
+        href: "https://drive.google.com/file/d/18AoeeY-YG24-yxiqBlVGnHsqLM5T7hEX/view?usp=sharing",
+        label: "Open Queryra Google Drive file",
+        icon: <Image src="/icons/google-drive.png" alt="" aria-hidden="true" width={24} height={24} className="size-6 shrink-0 object-contain" />,
+      },
       description:
         "A full-stack application and standalone command-line interface that transforms natural-language questions into validated, read-only SQL using Gemini and a schema-aware generation pipeline. Includes CSV schema discovery, SQL safety validation, and local DuckDB execution, with command-line dataset selection and support for user-provided Gemini API keys.",
       technologies: ["Gemini", "SQL", "DuckDB", "CSV", "Full-Stack", "CLI"],
@@ -155,21 +159,21 @@ const imageIcon = (src: string) =>
         },
       ],
       image: "",
-      video: "",
+      video: "/queryraportfolio.mp4",
     },
     {
       title: "Watt-Watch Phantom Cut",
-      href: "https://github.com/LeonDae/WattWatch_PhantomCut",
+      href: "https://drive.google.com/file/d/19VBPAbT6kg-GUzp58_pjIF7JSLG0pg9G/view?usp=sharing",
       dates: "Hackathon winner",
-      active: true,
       description:
         "An intelligent energy auditor that detects 10+ electrical devices in real time with YOLOv8 and triggers power-wastage alerts through an ESP32. Winner at Frost Hacks Season 2, evaluated by TCS.",
       technologies: ["YOLOv8", "ESP32", "Computer Vision", "IoT"],
+      primaryIcon: <Icons.googleDrive className="h-4 w-4" />,
       links: [
         {
-          type: "Google Drive",
-          href: "https://drive.google.com/file/d/19VBPAbT6kg-GUzp58_pjIF7JSLG0pg9G/view?usp=sharing",
-          icon: <Icons.googleDrive className="size-3" />,
+          type: "GitHub",
+          href: "https://github.com/LeonDae/WattWatch_PhantomCut.git",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
@@ -179,7 +183,12 @@ const imageIcon = (src: string) =>
       title: "TermShield",
       href: "https://termshield-tyii.vercel.app/",
       dates: "Academic project",
-      active: true,
+      primaryIcon: <Image src="/icons/samsung-internet.png" alt="" aria-hidden="true" width={24} height={24} className="size-6 shrink-0 object-contain" />,
+      secondaryAction: {
+        href: "https://drive.google.com/file/d/1HI75fCwLFxqQAxAGvQpLrI36R-r1mXDz/view?usp=sharing",
+        label: "Open TermShield Google Drive file",
+        icon: <Image src="/icons/google-drive.png" alt="" aria-hidden="true" width={24} height={24} className="size-6 shrink-0 object-contain" />,
+      },
       description:
         "An AI contract risk analyzer for Indian freelancers. It uses LLM analysis to flag risky clauses, summarize contracts, and draft replies, with retrieval-augmented generation and vector search grounded in reference contract templates.",
       technologies: ["LLMs", "RAG", "Embeddings", "Vector Search", "Full-Stack Development"],

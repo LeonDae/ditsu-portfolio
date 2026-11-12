@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXContent } from "@content-collections/mdx/react";
 import { mdxComponents } from "@/mdx-components";
+import { getSiteUrl } from "@/lib/site-url";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -37,6 +38,8 @@ export async function generateMetadata({
     return undefined;
   }
 
+  const siteUrl = getSiteUrl(DATA.url).toString();
+
   let {
     title,
     publishedAt: publishedTime,
@@ -52,11 +55,11 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `${DATA.url}/blog/${slug}`,
+      url: `${siteUrl}/blog/${slug}`,
       ...(image && {
         images: [
           {
-            url: `${DATA.url}${image}`,
+            url: new URL(image, siteUrl).toString(),
           },
         ],
       }),
@@ -66,7 +69,7 @@ export async function generateMetadata({
       title,
       description,
       ...(image && {
-        images: [`${DATA.url}${image}`],
+        images: [new URL(image, siteUrl).toString()],
       }),
     },
   };
@@ -104,9 +107,9 @@ export default async function Blog({
     dateModified: post.publishedAt,
     description: post.summary,
     image: post.image
-      ? `${DATA.url}${post.image}`
-      : `${DATA.url}/blog/${slug}/opengraph-image`,
-    url: `${DATA.url}/blog/${slug}`,
+      ? new URL(post.image, getSiteUrl(DATA.url)).toString()
+      : new URL(`/blog/${slug}/opengraph-image`, getSiteUrl(DATA.url)).toString(),
+    url: new URL(`/blog/${slug}`, getSiteUrl(DATA.url)).toString(),
     author: {
       "@type": "Person",
       name: DATA.name,
